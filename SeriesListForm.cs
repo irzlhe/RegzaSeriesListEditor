@@ -22,10 +22,11 @@ namespace RegzaSeriesListEditor
         {
             InitializeComponent();
 
-            seriesListView.Columns.Add("番組名", 360);
-            seriesListView.Columns.Add("日付", 120);
-            nonSeriesListView.Columns.Add("番組名", 360);
-            nonSeriesListView.Columns.Add("日付", 120);
+            MinimumSize = Size;
+            seriesListView.Columns.Add("番組名", seriesListView.Size.Width * 70 / 100);
+            seriesListView.Columns.Add("日付", seriesListView.Size.Width * 25 / 100);
+            nonSeriesListView.Columns.Add("番組名", nonSeriesListView.Size.Width * 70 / 100);
+            nonSeriesListView.Columns.Add("日付", nonSeriesListView.Size.Width * 25 / 100);
         }
 
         private void selectTargetButton_Click(object sender, EventArgs e)
